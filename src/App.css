@@ -44,7 +44,7 @@
 }
 
 .nav-menu a:hover {
-  color: #7f4f80; /* Adjust hover color to match design */
+  color: #7f4f80;
 }
 
 .header-right {
@@ -55,45 +55,33 @@
 .cart-icon {
   position: relative;
   margin-right: 20px;
-  font-size: 24px; /* Slightly increased size for better visibility */
+  font-size: 24px;
   color: #333;
   cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .cart-icon:hover {
-  color: #72147e; /* Change icon color on hover */
-  transform: scale(1.1); /* Scale effect on hover */
+  color: #72147e;
+  transform: scale(1.1);
 }
 
 .cart-icon::after {
-  content: attr(data-count); /* Dynamically show the number of items in cart */
+  content: attr(data-count);
   position: absolute;
-  top: -8px; /* Position it above the cart icon */
-  right: -8px; /* Position it to the right of the cart icon */
-  background-color: #ff4500; /* Bright background color for the badge */
+  top: -8px;
+  right: -8px;
+  background-color: #ff4500;
   color: white;
   font-size: 12px;
-  padding: 2px 6px; /* Padding for the badge */
-  border-radius: 50%; /* Make it circular */
+  padding: 2px 6px;
+  border-radius: 50%;
   font-weight: bold;
-  display: ${(props) => (props.cartCount > 0 ? 'block' : 'none')}; /* Hide if count is zero */
-}
-
-.cart-icon i {
-  font-size: inherit; /* Ensures the font size for the icon follows the parent's size */
 }
 
 .cart-icon:hover::after {
-  background-color: #ff6347; /* Change the badge color on hover for effect */
+  background-color: #ff6347;
 }
-
-
-.cart-icon:hover {
-  color: #7f4f80; /* Hover color for the cart icon */
-}
-
-
 
 .login-button {
   background-color: #f3e4ef;
@@ -117,15 +105,81 @@
 }
 
 .linkedin-icon:hover {
-  color: #005582; /* Darker LinkedIn hover color */
+  color: #005582;
 }
 
+/* Responsive design for smaller screens */
 
+@media (max-width: 1024px) {
+  .nav-menu {
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .cart-icon {
+    font-size: 22px;
+  }
+
+  .login-button {
+    padding: 6px 15px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cart-icon {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  .login-button {
+    margin: 10px 0;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .areoveda-logo {
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 10px;
+  }
+
+  .nav-menu {
+    font-size: 12px;
+  }
+
+  .cart-icon {
+    font-size: 18px;
+  }
+
+  .login-button {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+}
 
 /* Footer.css */
 
 .footer {
-  background-color: #7f4f80; /* Footer background color */
+  background-color: #7f4f80;
   color: white;
   padding: 30px 20px;
   font-family: Arial, sans-serif;
@@ -232,36 +286,26 @@
   }
 }
 
-.nav-link {
-  color: greenyellow; /* Default color */
-  text-decoration: none;
-  padding: 0 15px;
-}
-
-.nav-link.active {
-  color: red; /* Active link color */
-  font-weight: bold;
-}
-
-/* App.css */
+/* General styles for the App */
 .App {
   font-family: Arial, sans-serif;
   text-align: center;
 }
 
-.home {
+.banner {
   background-color: #4CAF50;
   color: white;
   padding: 50px 0;
 }
 
-.home h1 {
+.banner h1 {
   margin: 0;
   font-size: 3em;
 }
 
-.home p {
+.banner p {
   font-size: 1.2em;
+  margin-top: 15px;
 }
 
 .section {
@@ -278,6 +322,16 @@
   padding: 20px;
 }
 
+.section-left h2 {
+  font-size: 2em;
+  color: #333;
+}
+
+.section-left p {
+  font-size: 1.1em;
+  color: #555;
+}
+
 .section-right {
   flex: 1;
   text-align: center;
@@ -289,49 +343,101 @@
   height: auto;
 }
 
-h2 {
-  color: #333;
-  font-size: 2em;
-}
-
-p {
-  font-size: 1.1em;
-  color: #555;
-}
-
-
-/* Container and Loader Section */
-.container.loader-section {
-  display: flex;
-  justify-content: center; /* Centers the loader horizontally */
-  align-items: center; /* Centers the loader vertically */
-  height: 100vh; /* Full viewport height to center loader */
-  background-color: #f0f0f0; /* Light background color */
-}
-
-/* Awesome Loader Animation */
-.loading {
-  width: 60px; /* Loader width */
-  height: 60px; /* Loader height */
-  border: 8px solid rgba(0, 0, 0, 0.1); /* Light border color for the outer ring */
-  border-top-color: #007bff; /* Primary color for the loader */
-  border-radius: 50%; /* Make it circular */
-  animation: spin 1.2s linear infinite; /* Spin animation */
-}
-
-/* Keyframes for spinning animation */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg); /* Start at 0 degrees */
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+  .banner {
+    padding: 40px 0;
   }
-  100% {
-    transform: rotate(360deg); /* End at 360 degrees for full rotation */
+
+  .banner h1 {
+    font-size: 2.5em;
+  }
+
+  .banner p {
+    font-size: 1.1em;
+  }
+
+  .section {
+    padding: 20px;
+  }
+
+  .section-left h2 {
+    font-size: 1.8em;
+  }
+
+  .section-left p {
+    font-size: 1em;
+  }
+
+  .section-right img {
+    max-width: 90%;
   }
 }
 
-/* Optional: For full-page loader */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+@media (max-width: 768px) {
+  .banner {
+    padding: 30px 0;
+  }
+
+  .banner h1 {
+    font-size: 2em;
+  }
+
+  .banner p {
+    font-size: 1em;
+  }
+
+  .section {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .section-left {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .section-left h2 {
+    font-size: 1.5em;
+  }
+
+  .section-left p {
+    font-size: 1em;
+  }
+
+  .section-right {
+    padding: 10px;
+  }
+
+  .section-right img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    padding: 20px 0;
+  }
+
+  .banner h1 {
+    font-size: 1.5em;
+  }
+
+  .banner p {
+    font-size: 0.9em;
+  }
+
+  .section {
+    padding: 10px;
+  }
+
+  .section-left h2 {
+    font-size: 1.3em;
+  }
+
+  .section-left p {
+    font-size: 0.9em;
+  }
 }
 
