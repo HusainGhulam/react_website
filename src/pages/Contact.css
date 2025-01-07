@@ -1,0 +1,88 @@
+/* General container for the contact page */
+.contact-page {
+    padding: 50px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Section styling */
+  .contact-section, .hours-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #fef6e4;
+    border-radius: 20px;
+    margin-bottom: 0px;
+  }
+  
+  .contact-section .image-container, 
+  .hours-section .image-container {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .contact-section .content, 
+  .hours-section .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .contact-section .content h2, 
+  .hours-section .content h2 {
+    font-size: 2.5rem;
+    color: #72147e;
+  }
+  
+  .contact-section .content p, 
+  .hours-section .content p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  /* Contact Info */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-item h3 {
+    font-size: 1.5rem;
+    color: #72147e;
+  }
+  
+  .contact-item p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  /* Office Hours List */
+  .hours-section ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .hours-section ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  /* Images */
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .contact-section, .hours-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .image-container {
+      margin-bottom: 20px;
+    }
+  }
+  

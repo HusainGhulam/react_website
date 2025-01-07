@@ -1,0 +1,337 @@
+/* Header.css */
+
+.header {
+  background-color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.areoveda-logo {
+  height: 35px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 15px;
+  font-size: 16px;
+}
+
+.nav-menu a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  color: #7f4f80; /* Adjust hover color to match design */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  position: relative;
+  margin-right: 20px;
+  font-size: 24px; /* Slightly increased size for better visibility */
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.cart-icon:hover {
+  color: #72147e; /* Change icon color on hover */
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+.cart-icon::after {
+  content: attr(data-count); /* Dynamically show the number of items in cart */
+  position: absolute;
+  top: -8px; /* Position it above the cart icon */
+  right: -8px; /* Position it to the right of the cart icon */
+  background-color: #ff4500; /* Bright background color for the badge */
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px; /* Padding for the badge */
+  border-radius: 50%; /* Make it circular */
+  font-weight: bold;
+  display: ${(props) => (props.cartCount > 0 ? 'block' : 'none')}; /* Hide if count is zero */
+}
+
+.cart-icon i {
+  font-size: inherit; /* Ensures the font size for the icon follows the parent's size */
+}
+
+.cart-icon:hover::after {
+  background-color: #ff6347; /* Change the badge color on hover for effect */
+}
+
+
+.cart-icon:hover {
+  color: #7f4f80; /* Hover color for the cart icon */
+}
+
+
+
+.login-button {
+  background-color: #f3e4ef;
+  color: #7f4f80;
+  padding: 8px 20px;
+  border: 2px solid #7f4f80;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.login-button:hover {
+  background-color: #7f4f80;
+  color: white;
+}
+
+.linkedin-icon {
+  font-size: 20px;
+  color: #0077b5;
+}
+
+.linkedin-icon:hover {
+  color: #005582; /* Darker LinkedIn hover color */
+}
+
+
+
+/* Footer.css */
+
+.footer {
+  background-color: #7f4f80; /* Footer background color */
+  color: white;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-contact {
+  flex: 1 1 250px;
+  margin-right: 30px;
+}
+
+.footer-contact h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-contact p {
+  margin: 8px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-contact p i {
+  margin-right: 10px;
+}
+
+.footer-links {
+  flex: 1 1 150px;
+}
+
+.footer-links h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.footer-social-payments {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.social-icons {
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #ffccff;
+}
+
+.payment-methods img {
+  margin-right: 10px;
+  height: 25px;
+}
+
+.footer-bottom {
+  background-color: #6a3771;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-bottom a:hover {
+  color: #ffccff;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+  }
+  .footer-contact, .footer-links, .footer-social-payments {
+      margin-bottom: 20px;
+  }
+}
+
+.nav-link {
+  color: greenyellow; /* Default color */
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+.nav-link.active {
+  color: red; /* Active link color */
+  font-weight: bold;
+}
+
+/* App.css */
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.home {
+  background-color: #4CAF50;
+  color: white;
+  padding: 50px 0;
+}
+
+.home h1 {
+  margin: 0;
+  font-size: 3em;
+}
+
+.home p {
+  font-size: 1.2em;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+.section-left {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+
+.section-right {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.section-right img {
+  max-width: 100%;
+  height: auto;
+}
+
+h2 {
+  color: #333;
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+
+/* Container and Loader Section */
+.container.loader-section {
+  display: flex;
+  justify-content: center; /* Centers the loader horizontally */
+  align-items: center; /* Centers the loader vertically */
+  height: 100vh; /* Full viewport height to center loader */
+  background-color: #f0f0f0; /* Light background color */
+}
+
+/* Awesome Loader Animation */
+.loading {
+  width: 60px; /* Loader width */
+  height: 60px; /* Loader height */
+  border: 8px solid rgba(0, 0, 0, 0.1); /* Light border color for the outer ring */
+  border-top-color: #007bff; /* Primary color for the loader */
+  border-radius: 50%; /* Make it circular */
+  animation: spin 1.2s linear infinite; /* Spin animation */
+}
+
+/* Keyframes for spinning animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Start at 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /* End at 360 degrees for full rotation */
+  }
+}
+
+/* Optional: For full-page loader */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+

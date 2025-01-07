@@ -1,0 +1,70 @@
+/* General container for the about page */
+.about-page {
+    padding: 50px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Section styling */
+  .values-section, .who-we-are-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #fef6e4;
+    border-radius: 20px;
+    margin-bottom: 0px;
+  }
+  
+  .values-section .image-container, 
+  .who-we-are-section .image-container {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .values-section .content, 
+  .who-we-are-section .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .values-section .content h2, 
+  .who-we-are-section .content h2 {
+    font-size: 2.5rem;
+    color: #72147e;
+  }
+  
+  .values-section .content p, 
+  .who-we-are-section .content p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .values-section .content ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .values-section .content ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  /* Images */
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .values-section, .who-we-are-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .image-container {
+      margin-bottom: 20px;
+    }
+  }
+  
